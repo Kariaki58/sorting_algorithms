@@ -1,5 +1,7 @@
-#pragma once
+#ifndef HEADER_H
+#define HEADER_H
 #include <stdlib.h>
+
 /**
  * struct listint_s - Double linked list node
  *
@@ -17,3 +19,4 @@ void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 void bubble_sort(int *array, size_t size);
 void swap(int *a, int *b);
+#endif
