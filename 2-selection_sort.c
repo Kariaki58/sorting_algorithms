@@ -16,6 +16,7 @@ void swap(int *a, int *b)
 
 /**
  * selection_sort - sort an array
+ * @array: array to be sorted
  * @size: size of array
 */
 
