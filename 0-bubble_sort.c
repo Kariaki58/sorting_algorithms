@@ -13,6 +13,7 @@ void swap(int *a, int *b)
 	*a = *b;
 	*b = temp;
 }
+
 /**
  * bubble_sort - sorts an array of integers
  * @array: array of integers
