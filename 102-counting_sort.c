@@ -1,5 +1,10 @@
 #include "sort.h"
 
+/**
+ * counting_sort - sort an array
+ * @array: array to sort
+ * @size: size of array
+ */
 void counting_sort(int *array, size_t size)
 {
 	unsigned int status, max = 0, i, dump;
