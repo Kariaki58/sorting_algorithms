@@ -40,7 +40,7 @@ int pivot_position(int *array, int low, int high, size_t size)
  * @array: array of integers
  * @low: lower bound of the array
  * @high: higher bound of the array
- * Return: return the index of pivot
+ * @size: size of the array
  * Return: return the index of pivot
  */
 void call_recursion(int *array, int low, int high, size_t size)
@@ -51,7 +51,7 @@ void call_recursion(int *array, int low, int high, size_t size)
 	{
 		pivot = pivot_position(array, low, high, size);
 		call_recursion(array, low, pivot - 1, size);
-		call_recursion(array, pivot + 1, high, size);	
+		call_recursion(array, pivot + 1, high, size);
 	}
 }
 /**
