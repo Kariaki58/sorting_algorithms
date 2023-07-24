@@ -22,7 +22,7 @@ void swap(int *a, int *b)
 
 void selection_sort(int *array, size_t size)
 {
-	unsigned int i, j, min_idx, key;
+	unsigned int i, j, min_idx;
 
 	if (size < 2)
 		return;
@@ -30,11 +30,13 @@ void selection_sort(int *array, size_t size)
 	{
 		min_idx = i;
 		for (j = i + 1; j < size; j++)
-			if (a[min_idx] > a[j])
+			if (array[j] < array[min_idx])
 				min_idx = j;
-		key = a[min_idx];
-		for (k = min_idx; k > i; k--)
-			a[k] = a[k - 1];
-		a[i] = key;
+		if (min_idx != i)
+		{
+			swap(&array[min_idx], &array[i]);
+			print_array(array, size);
+		}
+
 	}
 }
