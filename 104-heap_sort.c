@@ -1,5 +1,10 @@
 #include "sort.h"
 
+/**
+ * swap - swap integer
+ * @a: adress integer 1
+ * @b: address integer 2
+ */
 void swap(int *a, int *b)
 {
 	int temp;
@@ -9,6 +14,13 @@ void swap(int *a, int *b)
 	*b = temp;
 }
 
+/**
+ * heapify - heapify recursion
+ * @arr: arr
+ * @size: size
+ * @a: a
+ * @b: b
+ */
 void heapify(int *arr, size_t size, size_t a, size_t b)
 {
 	size_t more, left, right;
@@ -28,6 +40,11 @@ void heapify(int *arr, size_t size, size_t a, size_t b)
 	}
 }
 
+/**
+ * heap_sort - sort array
+ * @array: array of intergers
+ * @size: size of array
+ */
 void heap_sort(int *array, size_t size)
 {
 	int i;
