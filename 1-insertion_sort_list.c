@@ -28,7 +28,7 @@ void insertion_sort_list(listint_t **list)
 	int length;
 
 	length = get_length(*list);
-	if (!list || !(*list))
+	if (!list || !((*list)->next))
 		return;
 	if (length < 2)
 		return;
