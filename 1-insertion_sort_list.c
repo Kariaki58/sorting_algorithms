@@ -3,6 +3,7 @@
 /**
  * get_length - find the length of a list
  * @list: list
+ * Return: return length of list
  */
 int get_length(listint_t *list)
 {
