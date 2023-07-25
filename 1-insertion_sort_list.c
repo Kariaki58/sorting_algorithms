@@ -36,12 +36,12 @@ void insertion_sort_list(listint_t **list)
 			temp = curr->next;
 			curr->next = temp->next;
 			temp->prev = curr->prev;
-			if (curr->prev != NULL)
+			if (temp->prev != NULL)
 			{
 				curr_prev = curr->prev;
 				curr_prev->next = temp;
 			}
-			if (temp->next)
+			if (curr->next)
 				temp->next->prev = curr;
 			temp->next = curr;
 			curr->prev = temp;
