@@ -1,5 +1,13 @@
 #include "sort.h"
 
+/**
+ * find_pivot - find the pivot position
+ * @array: array of integers
+ * @l: left index
+ * @r: right index
+ * @size: size
+ * Return: return 0.
+ */
 int find_pivot(int *array, int l, int r, size_t size)
 {
 	int pivot, temp;
@@ -10,16 +18,12 @@ int find_pivot(int *array, int l, int r, size_t size)
 	j = r + 1;
 	while (1)
 	{
-		do
-		{
+		do {
 			i++;
-		}
-		while (array[i] < pivot);
-		do
-		{
+		} while (array[i] < pivot);
+		do {
 			j--;
-		}
-		while (array[j] > pivot);
+		} while (array[j] > pivot);
 		if (i >= j)
 			return (i);
 		if (i != j)
@@ -33,6 +37,13 @@ int find_pivot(int *array, int l, int r, size_t size)
 	return (0);
 }
 
+/**
+ * call_function - recurvis to swap array
+ * @array: array of integers
+ * @l: l
+ * @r: r
+ * @size: size
+ */
 void call_function(int *array, int l, int r, size_t size)
 {
 	int pivot;
